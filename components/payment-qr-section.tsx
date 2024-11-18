@@ -14,6 +14,7 @@ const PaymentQRSection = () => {
       await navigator.clipboard.writeText(text);
       toast.success("UPI ID copied to clipboard!");
     } catch (err) {
+      console.error(err);
       toast.error("Failed to copy UPI ID");
     }
   };
