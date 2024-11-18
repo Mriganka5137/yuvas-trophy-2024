@@ -64,7 +64,10 @@ export async function POST(req: NextRequest) {
     // Format data for the sheet
     const rowData = [
       [
-        new Date().toISOString(),
+        // set to IST timezone
+        new Date().toLocaleString("en-US", {
+          timeZone: "Asia/Kolkata",
+        }),
         data.teamDetails.teamName,
         data.teamDetails.captainName,
         data.teamDetails.contactNumber,
