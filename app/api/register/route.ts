@@ -5,13 +5,11 @@ import { google } from "googleapis";
 export async function POST(req: NextRequest) {
   try {
     // First, log the incoming request for debugging
-    console.log("Request headers:", req.headers);
 
     let data;
     // Check if the request is multipart form-data
     if (req.headers.get("content-type")?.includes("multipart/form-data")) {
       const formData = await req.formData();
-      console.log("FormData received:", Object.fromEntries(formData.entries()));
 
       const jsonDataString = formData.get("data");
       if (!jsonDataString) {
@@ -42,8 +40,6 @@ export async function POST(req: NextRequest) {
         );
       }
     }
-
-    console.log("Parsed data:", data);
 
     // Validate the data structure
     if (!data || !data.teamDetails || !data.players || !data.payment) {
