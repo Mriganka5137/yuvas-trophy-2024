@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
-import { QRCodeSVG } from "qrcode.react";
-import { Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Copy } from "lucide-react";
+import { QRCodeSVG } from "qrcode.react";
 import { toast } from "sonner";
 
 const PaymentQRSection = () => {

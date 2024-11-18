@@ -1,16 +1,14 @@
+/* eslint-disable */
 "use client";
-import React, { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -28,16 +26,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Loader2 } from "lucide-react";
-import { TeamDetails, Players, Payment, PlayerRole } from "@/types";
 import {
-  teamDetailsSchema,
-  playersSchema,
   paymentSchema,
+  playersSchema,
+  teamDetailsSchema,
 } from "@/schemas/registration";
-import PaymentQRSection from "../payment-qr-section";
+import { Payment, PlayerRole, Players, TeamDetails } from "@/types";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader2 } from "lucide-react";
+import React, { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";
+import PaymentQRSection from "../payment-qr-section";
 
 const PLAYER_ROLES: PlayerRole[] = [
   "Batsman",

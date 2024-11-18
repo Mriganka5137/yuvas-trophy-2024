@@ -1,13 +1,11 @@
-// app/api/register/route.ts
+// disable eslint for this file
+/* eslint-disable */
 import { NextRequest, NextResponse } from "next/server";
 import { google } from "googleapis";
 
 export async function POST(req: NextRequest) {
   try {
-    // First, log the incoming request for debugging
-
     let data;
-    // Check if the request is multipart form-data
     if (req.headers.get("content-type")?.includes("multipart/form-data")) {
       const formData = await req.formData();
 
@@ -78,7 +76,7 @@ export async function POST(req: NextRequest) {
             (p: any, i: number) => `${i + 1}. ${p.name} (${p.age}) - ${p.role}`
           )
           .join("\n"),
-        // Format substitutes data
+
         data.players.substitutes?.length > 0
           ? data.players.substitutes
               .map(

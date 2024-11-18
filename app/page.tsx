@@ -111,7 +111,7 @@ const HomePage = () => {
                 </motion.div>
                 <h1 className="text-5xl lg:text-7xl font-black tracking-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
-                    E-8 YUVA'S
+                    E-8 YUVA&apos;S
                   </span>
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mt-2">
                     TROPHY
