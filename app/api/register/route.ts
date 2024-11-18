@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
         // set to IST timezone
         new Date().toLocaleString("en-US", {
           timeZone: "Asia/Kolkata",
-        }),
+        }), //
         data.teamDetails.teamName,
         data.teamDetails.captainName,
         data.teamDetails.contactNumber,
