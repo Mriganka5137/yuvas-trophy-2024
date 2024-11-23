@@ -1,44 +1,41 @@
 "use client";
-import { RegistrationForm } from "@/components/registration/registration-form";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { ArrowLeft, Ghost, Home, X } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft, Ghost, Home } from "lucide-react";
 
 // RegistrationModal Component
-const RegistrationModal = ({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl h-[90vh] overflow-y-auto p-0">
-        <div className="sticky top-0 flex justify-between items-center bg-white p-4 border-b z-50">
-          <h2 className="text-xl font-bold">Team Registration</h2>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-          >
-            <X className="h-6 w-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <RegistrationForm />
-        </div>
-      </DialogContent>
-    </Dialog>
-  );
-};
+// const RegistrationModal = ({
+//   isOpen,
+//   onClose,
+// }: {
+//   isOpen: boolean;
+//   onClose: () => void;
+// }) => {
+//   return (
+//     <Dialog open={isOpen} onOpenChange={onClose}>
+//       <DialogContent className="max-w-3xl h-[90vh] overflow-y-auto p-0">
+//         <div className="sticky top-0 flex justify-between items-center bg-white p-4 border-b z-50">
+//           <h2 className="text-xl font-bold">Team Registration</h2>
+//           <button
+//             onClick={onClose}
+//             className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+//           >
+//             <X className="h-6 w-6" />
+//           </button>
+//         </div>
+//         <div className="p-4">
+//           <RegistrationForm />
+//         </div>
+//       </DialogContent>
+//     </Dialog>
+//   );
+// };
 
 const HomePage = () => {
-  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  // const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
-  const handleRegistrationClick = () => {
-    setIsRegistrationOpen(true);
-  };
+  // const handleRegistrationClick = () => {
+  //   setIsRegistrationOpen(true);
+  // };
 
   // return (
   //   <div className="min-h-screen bg-white ">
@@ -292,8 +289,8 @@ const HomePage = () => {
             Oops! Page not found
           </h2>
           <p className="text-gray-600 max-w-md mx-auto">
-            The page you're looking for seems to have vanished into thin air.
-            Don't worry though, you can find your way back home!
+            The page you&apos;re looking for seems to have vanished into thin
+            air. Don&apos;t worry though, you can find your way back home!
           </p>
         </div>
 
