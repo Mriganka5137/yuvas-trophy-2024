@@ -2,13 +2,12 @@
 import { RegistrationForm } from "@/components/registration/registration-form";
 import { Button } from "@/components/ui/button";
 
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { motion } from "framer-motion";
 import {
-  ArrowLeft,
   Badge,
   Calendar,
   ChevronRight,
-  Ghost,
-  Home,
   IndianRupee,
   MapPin,
   Phone,
@@ -17,8 +16,6 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 // RegistrationModal Component
 const RegistrationModal = ({
